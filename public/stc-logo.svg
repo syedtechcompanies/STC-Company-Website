@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#111827"/>
+  <text x="256" y="302" fill="#fff" font-family="Arial, sans-serif" font-size="168" font-weight="700" text-anchor="middle" letter-spacing="-8">STC</text>
+  <path d="M128 352h256" stroke="#38bdf8" stroke-linecap="round" stroke-width="20"/>
+</svg>
