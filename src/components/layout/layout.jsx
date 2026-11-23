@@ -11,7 +11,7 @@ const layout = () => {
                 <Navbar2 />
             </nav>
 
-            <main className='min-h-auto w-full'>
+            <main className='min-h-auto w-full max-w-[1600px] mx-auto px-2 sm:px-3 lg:px-4 pb-2'>
                 <Outlet />
             </main>
 

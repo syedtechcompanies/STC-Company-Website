@@ -242,10 +242,10 @@ const About = () => {
   let letterIdx = 0;
 
   return (
-    <div className='flex items-center justify-center mt-10 lg:mt-26 pb-10'>
+    <div className='flex items-center justify-center mt-8 lg:mt-12 pb-8'>
       <section
         ref={sectionRef}
-        className="bg-bg-light w-[97%] min-h-screen px-2 md:px-10 pt-10 md:pt-15 pb-10 relative rounded-4xl"
+        className="bg-bg-light w-[97%] min-h-0 px-2 md:px-10 pt-8 md:pt-10 pb-8 relative rounded-4xl"
       >
         {/* Header Section */}
         <div className="flex flex-col sm:flex-row items-start md:flex-col md:items-center md:justify-center lg:flex-row lg:items-start mb-6 md:mb-9">
@@ -263,7 +263,7 @@ const About = () => {
             />
           </div>
 
-          <h1 ref={headingRef} className="w-full text-center flex-1 text-6.5 sm:text-[34px] md:text-[40px] tracking-tighter sm:text-left md:text-center lg:text-left sm:px-6 md:px-0 lg:px-34 py-2 md:py-10 leading-tight">
+          <h1 ref={headingRef} className="w-full text-center flex-1 text-6.5 sm:text-[34px] md:text-[40px] tracking-tighter sm:text-left md:text-center lg:text-left sm:px-6 md:px-0 lg:px-20 py-2 md:py-6 leading-tight">
             {letters.map((item, i) => {
               if (item.char === '\n') return <br key={i} />;
               if (item.char === ' ') {
@@ -288,7 +288,7 @@ const About = () => {
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-20 items-start md:items-center">
           {/* Image Section */}
           <div className="w-full lg:w-auto lg:shrink-0 md:flex md:justify-center">
-            <ScrollReveal className="w-full md:w-105 h-85 sm:h-105 md:h-140 rounded-3xl overflow-hidden bg-[#1e1e2e]">
+            <ScrollReveal className="w-full md:w-88 h-72 sm:h-82 md:h-108 rounded-3xl overflow-hidden bg-[#1e1e2e]">
               <img
                 src={AboutData.image}
                 alt="Profile"
@@ -299,10 +299,10 @@ const About = () => {
 
 
           {/* Stats Section */}
-          <div className="w-full grid justify-center items-center lg:justify-start gap-2 pt-2 md:px-2 md:py-4 font-thin mr-6">
+          <div className="w-full grid justify-center items-center lg:justify-start gap-2 pt-2 md:px-2 md:py-2 font-thin mr-6">
 
             <div className='mx-auto lg:mx-0'>
-              <p ref={descRef} className="text-[14px] sm:text-[15px] md:text-[20px] text-text-muted flex flex-col tracking-tighter leading-relaxed pb-12">
+              <p ref={descRef} className="text-[14px] sm:text-[15px] md:text-[18px] text-text-muted flex flex-col tracking-tighter leading-relaxed pb-6">
                 <span className='md:ml-30'>
                   <strong className="text-text-dark font-thin">{AboutData.description.strong}</strong>{' '}
                   <span>{AboutData.description.span1}</span>
@@ -317,7 +317,7 @@ const About = () => {
 
               {/* Left Column */}
               <div className="flex flex-col gap-1 overflow-hidden">
-                <div className="bg-white rounded-2xl px-4 py-2 flex justify-between h-22">
+                <div className="bg-white rounded-2xl px-4 py-2 flex justify-between h-16">
                   <span className="text-4xl font-medium text-gray-800 flex items-center gap-0.5">
                     <AnimatedNumber number={27} />
                     <span className=''>+</span>
@@ -325,7 +325,7 @@ const About = () => {
                   <span className="text-text-muted text-sm font-mono">01</span>
                 </div>
 
-                <div className="bg-white rounded-2xl p-8 flex flex-col justify-between h-80 w-full">
+                <div className="bg-white rounded-2xl p-6 flex flex-col justify-between h-52 w-full">
                   <div className="text-right">
                     <h3 className="text-xl font-medium text-gray-800 leading-tight">Success project <br /> completed</h3>
                   </div>
@@ -337,7 +337,7 @@ const About = () => {
 
               {/* Right Column */}
               <div className="flex flex-col gap-1 overflow-hidden">
-                <div className="bg-white rounded-2xl px-4 py-2 flex justify-between h-22">
+                <div className="bg-white rounded-2xl px-4 py-2 flex justify-between h-16">
                   <p className="text-4xl font-medium text-gray-800 flex items-center gap-0.5">
                     <AnimatedNumber number={95} />
                     <span>%</span>
@@ -345,7 +345,7 @@ const About = () => {
                   <span className="text-gray-400 text-sm font-mono">02</span>
                 </div>
 
-                <div className=" cards bg-white rounded-2xl p-8 flex flex-col justify-between h-80 w-full">
+                <div className=" cards bg-white rounded-2xl p-6 flex flex-col justify-between h-52 w-full">
                   <div className="text-right">
                     <h3 className="text-xl font-medium text-gray-800 leading-tight">Customer <br /> satisfaction rate</h3>
                   </div>

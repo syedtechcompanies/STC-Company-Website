@@ -49,13 +49,13 @@ const Testimonial = () => {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen bg-[#171717] w-full flex justify-center items-center text-white pt-12 md:pt-16 lg:py-20 px-4 md:px-6 lg:px-8"
+      className="min-h-0 bg-[#171717] w-full flex justify-center items-center text-white py-10 md:py-12 lg:py-14 px-4 md:px-6 lg:px-8"
     >
       <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-15 items-center justify-center max-w-7xl mx-auto">
 
         {/* Image Section */}
         <div ref={imageRef} className="w-full lg:w-auto flex justify-center">
-          <div className="h-80 sm:h-96 md:h-104 lg:h-120 w-full sm:w-auto">
+          <div className="h-72 sm:h-80 md:h-96 lg:h-[420px] w-full sm:w-auto">
             <img
               src={current.img}
               className="rounded-[40px] w-full sm:w-80 md:w-90 lg:w-100 h-full object-cover shadow-2xl grayscale"

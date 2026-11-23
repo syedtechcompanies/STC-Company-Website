@@ -57,7 +57,7 @@ const ContactForm = () => {
     return (
         <form
             onSubmit={handleSubmit}
-            className="space-y-8 max-w-lg"
+            className="space-y-6 max-w-lg"
         >
 
             {/* NAME + EMAIL */}

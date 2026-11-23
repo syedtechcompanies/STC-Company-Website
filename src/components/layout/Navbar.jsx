@@ -261,7 +261,7 @@ const Navbar = ({ ContactBtn }) => {
             <header
                 className={`
           fixed top-0 left-0 right-0 z-50
-          transition-all duration-300 
+          transition-all duration- 
           ${scrolled
                         ? "border-b border-white/10 py-2"
                         : " py-4"
@@ -275,7 +275,7 @@ const Navbar = ({ ContactBtn }) => {
                         <NavLink
                             to="/"
                             className="shrink-0 z-10"
-                            aria-label="Syed Tec Company home"
+                            aria-label="Syed Tech Company home"
                         >
                             {/*
                 Replace this with your actual SVG logo or <img>.

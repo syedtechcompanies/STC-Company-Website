@@ -29,10 +29,10 @@ const ServiceRow = ({
         />
 
         {/* Content */}
-        <div className="relative grid z-10 py-6 md:py-7">
+        <div className="relative grid z-10 py-2 md:py-3">
 
             {/* ── TOP ROW ── */}
-            <div className="flex items-center justify-between gap-2 sm:gap-4 px-3 py-4 sm:p-4">
+            <div className="flex items-center justify-between gap-2 sm:gap-4 px-3 py-3 sm:py-4 sm:px-4">
 
                 {/* LEFT: NUMBER + TITLE */}
                 <div className="flex items-center gap-3 sm:gap-6 min-w-0">
@@ -81,12 +81,12 @@ const ServiceRow = ({
             <div
                 className="overflow-hidden transition-all duration-[400ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
                 style={{
-                    maxHeight: isExpanded ? "220px" : "0px",
+                    maxHeight: isExpanded ? "180px" : "0px",
                     opacity: isExpanded ? 1 : 0,
                 }}
             >
                 <div
-                    className="pt-5 flex items-center justify-center gap-4 md:flex-row lg:items-center"
+                    className="pt-3 pb-2 flex items-center justify-center gap-4 md:flex-row lg:items-center"
                 >
 
                     {/* IMAGE */}
@@ -148,11 +148,11 @@ const Services = () => {
         hoveredId === id || activeId === id;
 
     return (
-        <section className="bg-bg-dark py-20 lg:py-28 px-4">
+        <section className="bg-bg-dark py-8 lg:py-10 px-4">
             <div className="max-w-330 mx-auto">
 
                 {/* HEADER */}
-                <div className="mb-10">
+                <div className="mb-5">
                     <ArrowBtn
                         label="Our Services"
                         iconBg="bg-black"
@@ -166,7 +166,7 @@ const Services = () => {
                     />
                 </div>
 
-                <div className="mb-12">
+                <div className="mb-6">
                     <SecHeading title={ServicesData.Title} />
                 </div>
 

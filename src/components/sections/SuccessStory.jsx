@@ -29,7 +29,7 @@ const StarRating = () => (
 
 // ─── SuccessSection ───────────────────────────────────────────────────────────
 const SuccessStory = () => (
-    <section className="bg-bg-main py-10 md:py-20 lg:py-28">
+    <section className="bg-bg-main py-8 md:py-12 lg:py-16">
         <div className="max-w-330 mx-auto px-6 lg:px-0">
 
             {/* GRID */}
@@ -38,7 +38,7 @@ const SuccessStory = () => (
                 {/* ───────── CARD 1 ───────── */}
                 <UseInViewWrapper>
                     <div className="bg-bg-light p-6 rounded-2xl flex flex-col justify-between 
-                        min-h-[280px] sm:min-h-[320px] md:min-h-[380px] lg:min-h-[500px]md:col-span-2 h-full lg:col-span-1">
+                        min-h-[240px] sm:min-h-[280px] md:min-h-[320px] lg:min-h-[360px] md:col-span-2 h-full lg:col-span-1">
 
                         {/* Top Left */}
                         <div>
@@ -63,7 +63,7 @@ const SuccessStory = () => (
 
                 {/* ───────── CARD 2 (MATCHED DESIGN) ───────── */}
                 {/* <UseInViewWrapper delay={700}> */}
-                <div className="relative rounded-2xl overflow-hidden p-2 min-h-95 lg:min-h-125">
+                <div className="relative rounded-2xl overflow-hidden p-2 min-h-[280px] lg:min-h-[360px]">
 
                     {/* Background Image */}
                     <img
@@ -101,7 +101,7 @@ const SuccessStory = () => (
 
                 {/* ───────── CARD 3 ───────── */}
                 <UseInViewWrapper delay={800}>
-                    <div className="bg-gray-100 p-6 rounded-2xl flex flex-col justify-between min-h-[280px] sm:min-h-[320px] md:min-h-[380px] lg:min-h-[500px]">
+                    <div className="bg-gray-100 p-6 rounded-2xl flex flex-col justify-between min-h-[240px] sm:min-h-[280px] md:min-h-[320px] lg:min-h-[360px]">
 
                         {/* TOP */}
                         <div className="flex flex-col gap-4">

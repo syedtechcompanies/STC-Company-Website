@@ -24,7 +24,7 @@ export default function NoDataModal({ src, alt, msg }) {
           />)}
 
         {msg && (
-          <p className="text-gray-400 font-semibold">{msg}</p>
+          <p className="text-gray-400 font-semibold ">{msg}</p>
         )
 
         }

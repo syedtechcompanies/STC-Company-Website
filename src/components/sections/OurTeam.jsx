@@ -195,7 +195,7 @@ function OurTeam() {
   // ─── Render ──────────────────────────────────────────────────────────────
  
   return (
-    <main className="w-full min-w-0 min-h-[calc(100vh-80px)] overflow-x-hidden bg-bg-dark pt-28 pb-20">
+    <main className="w-full min-w-0 min-h-0 overflow-x-hidden bg-bg-dark pt-12 pb-12">
       <div className="max-w-330 mx-auto p-4" id="members">
         {/* HEADER */}
         <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
@@ -212,7 +212,7 @@ function OurTeam() {
         </div>
  
         {/* Heading + Desktop Controls */}
-        <div className="mt-6 mb-12 flex items-center justify-between gap-4">
+        <div className="mt-6 mb-8 flex items-center justify-between gap-4">
           <div className="w-full text-center lg:text-left">
             <SecHeading title="Meet The Team." subtitle="Behind The Work." />
  

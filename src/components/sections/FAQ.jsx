@@ -65,7 +65,7 @@ const FAQ = () => {
         <>
             <SuccessStory />
 
-            <section className="bg-bg-dark py-20 lg:py-28">
+            <section className="bg-bg-dark py-12 lg:py-16">
 
                 <div className="mx-auto grid justify-center items-center gap-8 lg:gap-10">
 

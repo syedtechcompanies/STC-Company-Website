@@ -60,7 +60,6 @@ import React from 'react'
 import OurTeam from '../components/sections/OurTeam'
 import About from '../components/sections/About'
 import FAQ from '../components/sections/FAQ'
-import Cta from '../components/sections/Cta'
 import Services from '../components/sections/Services'
 import Projects from '../components/sections/Projects'
 import HeroSection from '../components/sections/Hero'
@@ -115,7 +114,6 @@ const Home = () => {
                 <Services />
                 <OurTeam />
                 <FAQ />
-                <Cta />
             </main>
         </>
     )

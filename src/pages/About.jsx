@@ -58,9 +58,9 @@ const About = () => {
             {/* ✅ SEO Component - Complete SEO for About Page */}
             <SEO
                 // Primary Meta Tags
-                title="About Syed Tec Company (STC)"
-                description="Meet the team and learn how Syed Tec Company helps businesses build useful digital products and software."
-                keywords="about Syed Tec Company, STC, software company, digital products, web development, software solutions"
+                title="About Syed Tech Company (STC)"
+                description="Meet the team and learn how Syed Tech Company helps businesses build useful digital products and software."
+                keywords="about Syed Tech Company, STC, software company, digital products, web development, software solutions"
                 
                 // URL & Images
                 url="https://www.ssibannu.com/about"
@@ -69,9 +69,9 @@ const About = () => {
                 imageHeight="630"
                 
                 // Site Info
-                siteName="Syed Tec Company"
+                siteName="Syed Tech Company"
                 locale="en_US"
-                author="Syed Tec Company"
+                author="Syed Tech Company"
                 
                 // Location - Bannu Specific
                 city="Bannu"
@@ -89,7 +89,7 @@ const About = () => {
                 ]}
             />
 
-            <main className='pt-4'>
+            <main className='pt-2'>
                 <AboutusComponent />
                 <StoryComponent />
                 <OurTeam />

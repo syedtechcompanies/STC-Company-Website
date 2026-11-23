@@ -235,14 +235,14 @@ const ProjectsSection = () => {
 
 
   return (
-    <section className="bg-bg-card py-20 lg:py-28">
+    <section className="bg-bg-card py-12 lg:py-16">
       <div className="max-w-[1320px] mx-auto px-6 lg:px-10">
 
 
         <div className="mx-auto grid justify-center items-center">
           <h3 className="text-text-primary font-semibold text-center text-2xl my-6">{ProjectsData.topHead}</h3>
 
-          <div className="mb-20 overflow-hidden bg-blend-overlay">
+          <div className="mb-10 overflow-hidden bg-blend-overlay">
             <div className="flex items-center justify-center mt-auto overflow-hidden relative">
               <div className=" overflow-x-hidden opacity-70 hover:opacity-100 transition duration-300">
 

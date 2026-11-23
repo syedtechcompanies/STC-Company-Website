@@ -45,7 +45,7 @@ const StoryComponent = () => {
                         <div className="flex flex-col gap-5 sm:gap-5 gap-y-5">
 
                             <p className="sm:text-base md:text-lg text-gray-500 text-[16px] leading-relaxed tracking-tighter">
-                                Syed Tec Company was founded to help organizations solve real problems through thoughtful technology. We bring together software development, product design, and practical business insight to create useful digital experiences.
+                                Syed Tech Company was founded to help organizations solve real problems through thoughtful technology. We bring together software development, product design, and practical business insight to create useful digital experiences.
                             </p>
 
                             <p className="sm:text-base md:text-lg text-gray-500 text-[16px] leading-relaxed tracking-tighter">

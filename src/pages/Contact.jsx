@@ -208,12 +208,12 @@ const ContactPage = () => {
                 </script>
             </SEO>
 
-            <section className="min-h-screen bg-bg-dark pt-36 pb-20 px-6 lg:px-8">
+            <section className="min-h-0 bg-bg-dark pt-24 md:pt-28 pb-12 md:pb-16 px-6 lg:px-8">
                 <div className="max-w-330 mx-auto">
 
                     {/* ── HEADING ── */}
-                    <div className="text-center mb-16">
-                        <h1 className="text-text-dark font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-4">
+                    <div className="text-center mb-8 md:mb-10">
+                        <h1 className="text-text-dark font-bold text-4xl sm:text-5xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight mb-3">
                             Let's work together
                         </h1>
                         <p className="text-text-muted max-w-xl mx-auto text-sm sm:text-base">
@@ -222,20 +222,20 @@ const ContactPage = () => {
                     </div>
 
                     {/* ── IMAGE + MAP ── */}
-                    <div className="grid md:grid-cols-2 gap-10 mb-20 items-center">
+                    <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-10 md:mb-12 items-center">
 
                         {/* Image */}
                         <div className="flex justify-center md:justify-start">
                             <img
                                 src="https://res.cloudinary.com/dzo12ba3f/image/upload/v1778054308/ssi-frontend-media/file_l3rctm.jpg"
                                 alt="Syed Tec Company office in Bannu"
-                                className="w-72 md:w-96 rounded-2xl object-cover"
+                                className="w-72 md:w-80 rounded-2xl object-cover"
                                 loading="lazy"
                             />
                         </div>
 
                         {/* Map */}
-                        <div className="rounded-2xl overflow-hidden border border-border-dark h-[300px] md:h-[350px]">
+                        <div className="rounded-2xl overflow-hidden border border-border-dark h-[250px] md:h-[280px]">
                             <iframe
                                 title="Syed Tec Company location map - Bannu, Pakistan"
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107096.64159926581!2d70.48658987237324!3d32.98346808626968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d807d15d5dcb9f%3A0x594a45bd114db9!2sSYED%20SFOFTWARE%20HOUSE%20bANNU!5e0!3m2!1sen!2s!4v1777877680061!5m2!1sen!2s"
@@ -246,7 +246,7 @@ const ContactPage = () => {
                     </div>
 
                     {/* ── FORM + INFO ── */}
-                    <div className="grid md:grid-cols-2 gap-12">
+                    <div className="grid md:grid-cols-2 gap-8 md:gap-10">
 
                         {/* FORM */}
                         <ContactForm />

@@ -7,16 +7,10 @@ function Navbar2() {
   const [activeLink, setActiveLink] = useState("HOME");
   const [menuOpen, setMenuOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(true);
-  const [pagesDropdownOpen, setPagesDropdownOpen] = useState(false); // desktop "PAGES" dropdown
-  const [pagesOpen, setPagesOpen] = useState(false); // mobile "PAGES" accordion
   const [showBottomFade, setShowBottomFade] = useState(false); // "more content below" hint
-  const [pagesScrollFade, setPagesScrollFade] = useState({ left: false, right: false }); // horizontal scroll hint
 
   const navbarRef = useRef(null);
-  const pagesDropdownRef = useRef(null);
   const mobileMenuRef = useRef(null);
-  const mobilePagesSectionRef = useRef(null);
-  const mobilePagesScrollRef = useRef(null); // horizontal PAGES row
 
   // Collapse navbar on scroll down, expand on scroll up
   useEffect(() => {
@@ -52,25 +46,17 @@ function Navbar2() {
       ) {
         setMenuOpen(false);
       }
-      if (
-        pagesDropdownOpen &&
-        pagesDropdownRef.current &&
-        !pagesDropdownRef.current.contains(e.target)
-      ) {
-        setPagesDropdownOpen(false);
-      }
     };
 
     document.addEventListener("click", handleClickOutside);
     return () => document.removeEventListener("click", handleClickOutside);
-  }, [menuOpen, pagesDropdownOpen]);
+  }, [menuOpen]);
 
   // Close menus on Escape, and lock body scroll while mobile menu is open
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "Escape") {
         setMenuOpen(false);
-        setPagesDropdownOpen(false);
       }
     };
     document.addEventListener("keydown", handleKeyDown);
@@ -92,32 +78,11 @@ function Navbar2() {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setMenuOpen(false);
-        setPagesOpen(false);
       }
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  // When the mobile "PAGES" accordion opens, bring it fully into view instead
-  // of leaving its top (or the links below it) clipped by the menu's own scroll area.
-  useEffect(() => {
-    if (!pagesOpen) return;
-    const timer = setTimeout(() => {
-      mobilePagesSectionRef.current?.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-      });
-      checkOverflow();
-      checkPagesScrollFade();
-    }, 260); // wait for the accordion's height transition to finish
-    return () => clearTimeout(timer);
-  }, [pagesOpen]);
-
-  // Reset the accordion state whenever the mobile menu itself closes
-  useEffect(() => {
-    if (!menuOpen) setPagesOpen(false);
-  }, [menuOpen]);
 
   // Show a bottom fade whenever there's more menu content below the fold —
   // makes it obvious the panel scrolls instead of looking like it's just cut off.
@@ -125,17 +90,6 @@ function Navbar2() {
     const el = mobileMenuRef.current;
     if (!el) return;
     setShowBottomFade(el.scrollHeight - el.scrollTop - el.clientHeight > 4);
-  }
-
-  // Same idea, but for the horizontal PAGES row: fade on whichever side still
-  // has unscrolled links, so it reads as "swipe me" instead of "cut off".
-  function checkPagesScrollFade() {
-    const el = mobilePagesScrollRef.current;
-    if (!el) return;
-    setPagesScrollFade({
-      left: el.scrollLeft > 4,
-      right: el.scrollWidth - el.scrollLeft - el.clientWidth > 4,
-    });
   }
 
   useEffect(() => {
@@ -147,13 +101,6 @@ function Navbar2() {
       window.removeEventListener("resize", checkOverflow);
     };
   }, [menuOpen]);
-
-  const pagesLinks = [
-    { label: "Projects", href: "/projects" },
-    { label: "Services", href: "/services" },
-    { label: "Team", href: "/team" },
-    { label: "Contact", href: "/contact" },
-  ];
 
   const navLink = (label, path, key = label) => (
     <button
@@ -220,14 +167,18 @@ function Navbar2() {
           type="button"
           onClick={() => navigate("/")}
           aria-label="Syed Tec Company home"
-          className="rounded-full bg-gray-900 text-white font-bold tracking-tight border-2 border-white shadow-sm shrink-0"
+          className="rounded-full overflow-hidden bg-blue-50 border-2 border-white shadow-sm shrink-0"
           style={{
             width: isExpanded ? "48px" : "36px",
             height: isExpanded ? "48px" : "36px",
             transition: "all 0.4s cubic-bezier(0.4,0,0.2,1)",
           }}
         >
-          STC
+          <img
+            src="/assets/stc.png"
+            alt="STC"
+            className="w-full h-full object-contain"
+          />
         </button>
 
         {/* Status */}
@@ -264,64 +215,8 @@ function Navbar2() {
           {navLink("HOME", "/", "HOME")}
           {navLink("ABOUT", "/about", "ABOUT")}
           {navLink("PROJECTS", "/projects", "PROJECTS")}
-
-          {/* PAGES Dropdown */}
-          <div className="relative" ref={pagesDropdownRef}>
-            <button
-              onClick={() => setPagesDropdownOpen((prev) => !prev)}
-              aria-haspopup="true"
-              aria-expanded={pagesDropdownOpen}
-              className="relative px-3 py-1.5 text-sm font-medium rounded-full group flex items-center gap-1"
-            >
-              <span className="text-gray-500">PAGES</span>
-              <svg
-                className={`w-4 h-4 transition-transform duration-200 ${
-                  pagesDropdownOpen ? "rotate-180" : ""
-                }`}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-
-            {/* Dropdown Menu — vertical list; scrolls if it would overflow the viewport */}
-            <div
-              aria-hidden={!pagesDropdownOpen}
-              style={{
-                opacity: pagesDropdownOpen ? 1 : 0,
-                transform: pagesDropdownOpen
-                  ? "translateY(0) scaleY(1)"
-                  : "translateY(-8px) scaleY(0.97)",
-                pointerEvents: pagesDropdownOpen ? "auto" : "none",
-                transformOrigin: "top",
-                transition:
-                  "opacity 0.25s ease, transform 0.25s cubic-bezier(0.22,1,0.36,1)",
-                maxHeight: "min(60vh, 420px)",
-              }}
-              className="dropdown-scroll absolute top-[calc(100%+8px)] left-1/2 -translate-x-1/2 bg-white border border-gray-200 rounded-2xl p-2.5 w-56 shadow-2xl shadow-black/10 overflow-y-auto overscroll-contain"
-            >
-              <ul className="flex flex-col gap-1">
-                {pagesLinks.map((link) => (
-                  <li key={link.href}>
-                    <a
-                      href={link.href}
-                      onClick={() => setPagesDropdownOpen(false)}
-                      className="text-sm text-gray-700 hover:text-indigo-600 transition-colors duration-150 block w-full text-left py-2.5 px-3.5 rounded-xl hover:bg-gray-50 active:bg-gray-100"
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+          {navLink("SERVICES", "/services", "SERVICES")}
+          {navLink("TEAM", "/team", "TEAM")}
         </div>
 
         {/* Right Side */}
@@ -401,112 +296,8 @@ function Navbar2() {
             {mobileLink("HOME", "/", "HOME")}
             {mobileLink("ABOUT", "/about", "ABOUT")}
             {mobileLink("PROJECTS", "/projects", "PROJECTS")}
-
-            <div ref={mobilePagesSectionRef} className="relative z-10 scroll-mt-4">
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setPagesOpen((prev) => !prev);
-                }}
-                aria-expanded={pagesOpen}
-                className="w-full py-3 text-center rounded-xl overflow-hidden group flex items-center justify-center gap-2"
-              >
-                <span className="text-gray-600">PAGES</span>
-                <svg
-                  className={`w-4 h-4 text-gray-600 transition-transform duration-300 ${
-                    pagesOpen ? "rotate-180" : ""
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-
-              {/*
-                Single scroll container for vertical scrolling: the inner layer
-                (mobileMenuRef) handles the page's own vertical scroll. This row
-                itself scrolls sideways (horizontally) so the accordion's open
-                height stays small and predictable on phones. Left/right fades
-                (below) signal there are more links off-screen so it reads as
-                "swipe me" rather than "cut off".
-              */}
-              <div
-                className={`relative overflow-hidden ${
-                  pagesOpen ? "max-h-20 opacity-100 mt-2" : "max-h-0 opacity-0"
-                }`}
-                style={{
-                  transition:
-                    "max-height 0.35s cubic-bezier(0.22,1,0.36,1), opacity 0.25s ease-out, margin-top 0.35s cubic-bezier(0.22,1,0.36,1)",
-                }}
-              >
-                <div
-                  ref={mobilePagesScrollRef}
-                  onScroll={checkPagesScrollFade}
-                  className="dropdown-scroll flex flex-row flex-nowrap gap-2 overflow-x-auto overscroll-contain px-1 pb-2"
-                  style={{ scrollSnapType: "x proximity" }}
-                >
-                  {pagesLinks.map((link, i) => (
-                    <a
-                      key={link.href}
-                      href={link.href}
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setMenuOpen(false);
-                      }}
-                      className="shrink-0 whitespace-nowrap py-2.5 px-4 text-sm text-gray-600 bg-gray-50/80 hover:bg-indigo-50 hover:text-indigo-600 active:scale-95 rounded-full transition-all duration-200"
-                      style={{
-                        scrollSnapAlign: "start",
-                        opacity: pagesOpen ? 1 : 0,
-                        transform: pagesOpen ? "translateY(0)" : "translateY(4px)",
-                        transition: `opacity 0.3s ease-out ${
-                          pagesOpen ? i * 0.03 : 0
-                        }s, transform 0.3s cubic-bezier(0.22,1,0.36,1) ${
-                          pagesOpen ? i * 0.03 : 0
-                        }s, background-color 0.2s ease, color 0.2s ease`,
-                      }}
-                    >
-                      {link.label}
-                    </a>
-                  ))}
-                </div>
-
-                {/* Left fade — only visible once the user has scrolled right */}
-                <div
-                  aria-hidden="true"
-                  className={`pointer-events-none absolute top-0 bottom-2 left-0 w-8 bg-gradient-to-r from-white to-transparent transition-opacity duration-200 ${
-                    pagesScrollFade.left ? "opacity-100" : "opacity-0"
-                  }`}
-                />
-                {/* Right fade — visible while more links sit off-screen to the right */}
-                <div
-                  aria-hidden="true"
-                  className={`pointer-events-none absolute top-0 bottom-2 right-0 w-10 bg-gradient-to-l from-white to-transparent flex items-center justify-end transition-opacity duration-200 ${
-                    pagesScrollFade.right ? "opacity-100" : "opacity-0"
-                  }`}
-                >
-                  <svg
-                    className="w-4 h-4 text-gray-400 mr-1 animate-pulse"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
+            {mobileLink("SERVICES", "/services", "SERVICES")}
+            {mobileLink("TEAM", "/team", "TEAM")}
 
             <div className="h-px bg-gray-100 my-1" />
 
