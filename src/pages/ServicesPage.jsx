@@ -113,9 +113,9 @@ const ServicesHero = ({ heading, subtitle }) => (
         />
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="flex flex-col items-start gap-4">
         <SecHeading title={heading} text="lg:text-6xl" font="font-extrabold" />
-        <p className="text-text-muted font-thin md:text-lg max-w-xl mt-4 tracking-tight">
+        <p className="text-text-muted font-thin md:text-lg max-w-xl tracking-tight text-left">
           {subtitle}
         </p>
       </div>

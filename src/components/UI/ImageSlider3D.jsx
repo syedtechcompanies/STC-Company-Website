@@ -100,7 +100,7 @@ const ImageSlider3D = ({ images = defaultImages }) => {
             <div
               key={i}
               ref={(el) => (cardsRef.current[i] = el)}
-              className="absolute size-78 rounded-[1.2rem] overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.8)] bg-zinc-900 border border-white/5"
+              className="absolute size-65 rounded-[1.2rem] overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.8)] bg-zinc-900 border border-white/5"
               style={{
                 transformOrigin: "center center",
                 willChange: "transform",

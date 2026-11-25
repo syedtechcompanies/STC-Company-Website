@@ -229,7 +229,7 @@ const ContactPage = () => {
                             <img
                                 src="https://res.cloudinary.com/dzo12ba3f/image/upload/v1778054308/ssi-frontend-media/file_l3rctm.jpg"
                                 alt="Syed Tec Company office in Bannu"
-                                className="w-72 md:w-80 rounded-2xl object-cover"
+                                className="w-full max-w-72 md:max-w-80 rounded-2xl object-cover"
                                 loading="lazy"
                             />
                         </div>

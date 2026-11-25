@@ -205,19 +205,19 @@ const LayoutDetails = () => {
                     </div>
 
                     {/* Text Section with ScrollTrigger */}
-                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-8 px-10 sm:px-7 xl:px-30 pt-20 pb-20">
+                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-8 px-4 sm:px-7 lg:px-16 xl:px-25 pt-12 sm:pt-16 lg:pt-20 pb-12 sm:pb-16 lg:pb-20">
                         <div ref={aboutTitleRef} className="shrink-0 sm:min-w-37.5 lg:min-w-50">
                             <h1 className="text-white font-medium text-[26px] sm:text-[32px] lg:text-[42px] leading-tight tracking-tight">
                                 Behind the product
                             </h1>
                         </div>
                         <div ref={aboutDescRef} className="flex flex-col gap-3">
-                            <p className="text-gray-400 text-[20px] leading-relaxed tracking-tighter max-w-xl lg:max-w-2xl">
+                            <p className="text-gray-400 text-base sm:text-lg lg:text-xl leading-relaxed tracking-tighter max-w-xl lg:max-w-2xl">
                                 Jotumu is a purpose-built grocery experience that simplifies discovery,
                                 local shopping, and everyday ordering while giving independent retailers
                                 a more connected digital storefront.
                             </p>
-                            <p className="text-gray-400 text-[20px] leading-relaxed tracking-tighter max-w-xl lg:max-w-2xl">
+                            <p className="text-gray-400 text-base sm:text-lg lg:text-xl leading-relaxed tracking-tighter max-w-xl lg:max-w-2xl">
                                 Our team took on the challenge of crafting a mobile app that blends functionality.
                             </p>
                         </div>

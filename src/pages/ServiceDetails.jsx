@@ -8,7 +8,7 @@
 //  WhySection     → full-width text block
 
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
 import { SecHeading } from "../components/UI/Secheading.jsx";
 import { ArrowBtn } from "../components/UI/ArrowBtn.jsx";
 import CTASection from "../components/sections/Cta.jsx";
@@ -23,12 +23,13 @@ import { demoServiceDetails, demoServices } from "../constants/demoData.js";
 // header pattern used on Member/Projects/Events/Services pages.
 // Padding-top accounts for fixed navbar height.
 // ─────────────────────────────────────────────────────────────────────────────
-const DetailHero = ({ title, subtitle }) => (
+const DetailHero = ({ title, subtitle, onBack }) => (
   <section className="bg-bg-dark pt-36 pb-16 lg:pt-44 lg:pb-20">
     <div className="max-w-330 mx-auto px-2">
       <div className="flex flex-col items-center text-center lg:items-start lg:text-left lg:ml-10 mb-8">
         <ArrowBtn
-          label="Service Details"
+          label="Back to Services"
+          onClick={onBack}
           iconBg="bg-black"
           iconColor="text-white"
           textColor="text-black"
@@ -40,7 +41,7 @@ const DetailHero = ({ title, subtitle }) => (
       </div>
 
       {/* Title + subtitle */}
-      <div className="grid md:grid-cols-2 items-center lg:ml-10 gap-6">
+      <div className="flex flex-col items-start lg:ml-10 gap-4">
         <SecHeading
           title={
             title.split(" ").length > 3
@@ -59,7 +60,7 @@ const DetailHero = ({ title, subtitle }) => (
           text="lg:text-5xl font-extrabold"
         />
 
-        <p className="text-text-muted text-base md:text-lg leading-tight max-w-lg">
+        <p className="text-text-muted text-base md:text-lg leading-tight max-w-lg text-left">
           {subtitle}
         </p>
       </div>
@@ -308,6 +309,7 @@ const NotFound = () => (
 
 const ServiceDetails = () => {
   const { subServiceId: id, serviceId } = useParams();
+  const navigate = useNavigate();
 
   // ── Find matching subcategory + its parent category ──
   const [service, setService] = useState();
@@ -357,7 +359,11 @@ const ServiceDetails = () => {
 
   return (
     <main className="bg-bg-dark">
-      <DetailHero title={service.title} subtitle={service.subtitle} />
+      <DetailHero
+        title={service.title}
+        subtitle={service.subtitle}
+        onBack={() => navigate("/services")}
+      />
 
       {/* Carousel — all service.images passed to HeroCarousel */}
       <CarouselSection service={service} />
