@@ -1,6 +1,6 @@
 export const TeamData = {
-    heading: "Meet the experts",
-    subtitle: "behind gence",
+    heading: "People behind the craft",
+    subtitle: "Built through strategy, collaboration, and care",
     
     Members : [
     {

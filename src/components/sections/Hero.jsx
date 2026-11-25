@@ -534,7 +534,7 @@ const HeroSection = () => {
                                     "
                 />
               </span>
-              Digital solutions for growing businesses
+              Purpose-built digital solutions
             </div>
 
             {/* Heading */}
@@ -569,7 +569,7 @@ const HeroSection = () => {
                   backgroundClip: "text",
                 }}
               >
-                Build Better Digital Products
+                From Bold Ideas to
               </span>
 
               <span
@@ -585,7 +585,7 @@ const HeroSection = () => {
                   backgroundClip: "text",
                 }}
               >
-                With Syed Tech Company.
+                Digital Experiences That Matter.
               </span>
             </h1>
 
@@ -604,9 +604,9 @@ const HeroSection = () => {
                 fontSize: "clamp(0.95rem, 2vw, 1.08rem)",
               }}
             >
-              We design and build websites, mobile applications, and custom
-              software that help businesses solve real problems and grow. Based
-              in <strong className="text-gray-900 font-semibold">Bannu</strong>.
+              Syed Tech Company helps businesses turn complex challenges into
+              intuitive websites, mobile apps, and custom software—built for
+              lasting impact in <strong className="text-gray-900 font-semibold">Bannu</strong>.
             </p>
 
             {/* Buttons */}
@@ -641,7 +641,7 @@ const HeroSection = () => {
                                 border-none
                                 "
               >
-                Discuss Your Project
+                Start a Project
               </Link>
 
               <Link to="/services" className="w-full sm:w-auto">
@@ -665,7 +665,7 @@ const HeroSection = () => {
                                     duration-200
                                     "
                 >
-                  Explore Services
+                  View Our Expertise
                 </span>
               </Link>
             </div>

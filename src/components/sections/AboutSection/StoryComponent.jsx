@@ -33,9 +33,9 @@ const StoryComponent = () => {
 
                         {/* Heading */}
                         <h2 className="font-medium text-2xl sm:text-3xl md:text-4xl lg:text-[48px] xl:text-[52px] leading-tight tracking-tight text-center lg:text-left">
-                            Starting small to shaping
+                            From a focused beginning to
                             <br className="hidden sm:block" />
-                            digital experiences
+                            experiences built to endure
                         </h2>
 
                     </div>

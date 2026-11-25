@@ -208,7 +208,7 @@ const ProjectCard = ({ project }) => {
           "
         >
           <ArrowBtn
-            label="View CaseStudy"
+            label="Explore Case Studies"
             onClick={() => { }}
             btnBg="bg-bg-card"
             iconBg="bg-bg-card"

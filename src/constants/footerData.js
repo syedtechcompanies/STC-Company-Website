@@ -2,7 +2,7 @@
 
 export const NAV_COLUMNS = [
     {
-        heading: "Navigations",
+        heading: "Explore",
         links: [
             { label: "Home", href: "/" },
             { label: "About us", href: "/about" },
@@ -36,14 +36,14 @@ export const FooterLists = {
     brand: {
         name: "STC",
         description:
-            "Software and digital product solutions for growing businesses.",
+            "Turning business challenges into clear, capable digital experiences.",
         logo: "logo.svg",
     },
 
     newsletter: {
-        heading: "Subscribe to our newsletter",
-        placeholder: "Enter your email",
-        button: "Subscribe",
+        heading: "Product ideas, delivered",
+        placeholder: "Your work email",
+        button: "Join updates",
     },
 
     copyright: {

@@ -102,7 +102,7 @@ const ServicesHero = ({ heading, subtitle }) => (
     <div className="max-w-330 mx-auto px-3">
       <div className="flex flex-col items-center text-center lg:items-start lg:text-left mb-8">
         <ArrowBtn
-          label="Our Services"
+          label="Capabilities"
           iconBg="bg-black"
           iconColor="text-white"
           textColor="text-black"

@@ -5,9 +5,9 @@ import ScrollReveal from '../../../hooks/ScrollReveal';
 
 const AboutusComponent = () => {
     const stats = [
-        { value: "85", label: "build Real", name: "Projects" },
-        { value: "90", label: "Clients", name: "Satisfaction" },
-        { value: "95", label: "Thoughtful Design", name: "Approach" },
+        { value: "85", label: "Across disciplines", name: "Projects" },
+        { value: "90", label: "Relationships nurtured", name: "Satisfaction" },
+        { value: "95", label: "From insight to execution", name: "Approach" },
     ];
 
     const headerRef = useRef(null);
@@ -33,11 +33,11 @@ const AboutusComponent = () => {
                 {/* Header */}
                 <div ref={headerRef} className="flex flex-col lg:flex-row items-center justify-between gap-4 md:gap-6 lg:gap-20">
                     <h1 className="text-5xl sm:text-6xl lg:text-[80px] font-bold text-black text-center lg:text-left">
-                        About us
+                        Who we are
                     </h1>
 
                     <p className="text-md sm:text-lg text-gray-500 text-center lg:text-right max-w-xl">
-                        tools that make your work easier. We focus on smart
+                        We combine practical engineering with thoughtful design.
                         <br />
                         design and useful features, project after project.
                     </p>

@@ -20,7 +20,7 @@ const CTASection = () => (
                     <div className="flex flex-col items-center text-center gap-6 px-0 lg:px-8 pb-4">
 
                         <h2 className="text-text-primary text-4xl md:text-5xl font-medium tracking-tight">
-                            Let's Build <br /> something meaningful
+                            Build the next clear advantage
                         </h2>
 
                         <p className="text-text-muted text-lg leading-relaxed max-w-150">

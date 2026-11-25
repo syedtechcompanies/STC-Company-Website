@@ -28,15 +28,15 @@ const ValuesComponent = () => {
             {/* Main Heading */}
             <div className="w-full flex items-center justify-center text-center px-4">
                 <h1 className='text-[32px] sm:text-[40px] md:text-[48px] lg:text-[52px] font-medium tracking-tighter text-white leading-tight'>
-                    Our works across industries
+                    Selected work across diverse industries
                 </h1>
             </div>
 
             {/* Subheading - Two lines on mobile, one line on desktop */}
             <div className="w-full flex items-center justify-center text-center mt-4 md:mt-6 px-4">
                 <h2 className='text-[#A3A3A3] text-base sm:text-lg md:text-xl font-medium max-w-3xl mx-auto flex flex-col tracking-tighter'>
-                    <span className="block sm:inline">Check out our awesome projects that are sure to grab </span>
-                    <span className="block sm:inline">attention on Instagram!</span>
+                    <span className="block sm:inline">Digital experiences shaped around each client's goals, </span>
+                    <span className="block sm:inline">audience, and operating reality.</span>
                 </h2>
             </div>
 

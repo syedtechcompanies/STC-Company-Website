@@ -175,7 +175,7 @@ function Navbar2() {
           }}
         >
           <img
-            src="/assets/stc.png"
+            src="/assets/stclogo-transparent.png"
             alt="STC"
             className="w-full h-full object-contain"
           />

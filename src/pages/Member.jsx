@@ -204,7 +204,7 @@ function Member() {
         {/* HEADER */}
         <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
           <ArrowBtn
-            label="Our Team"
+            label="Meet the Team"
             iconBg="bg-black"
             iconColor="text-white"
             textColor="text-black"
@@ -218,7 +218,7 @@ function Member() {
         {/* Heading + Desktop Controls */}
         <div className="mt-6 mb-12 flex items-center justify-between gap-4">
           <div className="w-full text-center lg:text-left">
-            <SecHeading title="Meet The Team." subtitle="Behind The Work." />
+            <SecHeading title="People behind the craft." subtitle="Built through collaboration." />
 
             <p className="mt-3 text-xs font-bold tracking-[0.18em] text-text-muted uppercase">
               {memberCountLabel(loading ? null : members.length)}

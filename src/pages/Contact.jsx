@@ -214,10 +214,10 @@ const ContactPage = () => {
                     {/* ── HEADING ── */}
                     <div className="text-center mb-8 md:mb-10">
                         <h1 className="text-text-dark font-bold text-4xl sm:text-5xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight mb-3">
-                            Let's work together
+                            Turn your next idea into reality
                         </h1>
                         <p className="text-text-muted max-w-xl mx-auto text-sm sm:text-base">
-                            Let's build something impactful together.
+                            Tell us the problem you want to solve. We will shape a practical next step.
                         </p>
                     </div>
 

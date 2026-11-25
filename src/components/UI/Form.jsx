@@ -62,8 +62,8 @@ const ContactForm = () => {
 
             {/* NAME + EMAIL */}
             <div className="grid sm:grid-cols-2 gap-6">
-                <input name="name" value={formData.name} onChange={handleChange} placeholder="Name" required className={FIELD} />
-                <input name="email" value={formData.email} onChange={handleChange} placeholder="Email" required className={FIELD} />
+                <input name="name" value={formData.name} onChange={handleChange} placeholder="Your name" required className={FIELD} />
+                <input name="email" value={formData.email} onChange={handleChange} placeholder="Work email" required className={FIELD} />
             </div>
 
             {/* MESSAGE */}
@@ -72,7 +72,7 @@ const ContactForm = () => {
                 value={formData.message}
                 onChange={handleChange}
                 rows="4"
-                placeholder="Your message..."
+                placeholder="Tell us about the outcome you want..."
                 className={`${FIELD} resize-none`}
             />
 
@@ -86,7 +86,7 @@ const ContactForm = () => {
           hover:bg-accent transition
         "
             >
-                {isLoading ? "Sending..." : "Submit"}
+                {isLoading ? "Preparing..." : "Send inquiry"}
             </button>
 
         </form>

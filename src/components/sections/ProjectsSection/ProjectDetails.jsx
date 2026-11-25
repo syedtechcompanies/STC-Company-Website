@@ -117,12 +117,12 @@ const EmptyProjectsCard = () => {
         </div>
 
         <h3 className="text-2xl md:text-3xl font-semibold text-black mb-3 capitalize">
-        currently we are  updating our projects
+        Our latest project collection is in preparation
         </h3>
 
         <p className="text-gray-500 max-w-2xl mx-auto leading-relaxed">
-          We're currently preparing and uploading our latest projects.
-          Please check back soon to explore our work and study our hardworking.
+          We are organizing recent work and detailed case studies.
+          Visit again soon to explore the thinking and outcomes behind each build.
         </p>
       </div>
     </div>

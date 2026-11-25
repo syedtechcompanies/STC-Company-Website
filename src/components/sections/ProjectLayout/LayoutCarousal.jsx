@@ -106,10 +106,10 @@ const LayoutCarousal = () => {
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-8 sm:mb-12">
                 <div className="max-w-2xl">
                     <h2 className="text-3xl sm:text-4xl lg:text-[52px] font-medium text-gray-900 tracking-tight mb-3 leading-tight">
-                        Our works across industries
+                        Selected work across diverse industries
                     </h2>
                     <p className="text-[20px] text-gray-500 leading-relaxed tracking-relaxed ">
-                        Check out our awesome projects that are sure to grab attention on Instagram!
+                        Explore products created around distinct goals, users, and real-world challenges.
                     </p>
                 </div>
 

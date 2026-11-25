@@ -1,4 +1,4 @@
 export const getServicesPageHeader = () => ({
-  heading: "Digital Services Built for Business",
-  subtitle: "From product strategy and design to engineering and launch, we help turn business needs into reliable digital solutions.",
+  heading: "Technology shaped around your next move",
+  subtitle: "From first question to final release, we connect product thinking, design, and engineering in one focused process.",
 });

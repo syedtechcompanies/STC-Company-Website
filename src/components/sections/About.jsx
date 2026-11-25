@@ -146,6 +146,7 @@ const logoUrls = logos.map(item => item.logo);
 
 const About = () => {
   const sectionRef = useRef(null);
+  const aboutImageCardRef = useRef(null);
   const [letters, setLetters] = useState([]);
   const letterEls = useRef([]);
   const animatedRef = useRef(false);
@@ -157,6 +158,70 @@ const About = () => {
   const headingRef = useRef(null);
   const descRef = useRef(null);
   const statsCardRef = useRef(null);
+
+  useEffect(() => {
+    const imageCard = aboutImageCardRef.current;
+    if (!imageCard) return;
+
+    gsap.set(imageCard, {
+      rotateX: -90,
+      opacity: 0,
+      scale: 0.7,
+      filter: 'blur(10px)',
+      transformPerspective: 1200,
+      transformOrigin: 'center center',
+    });
+
+    const intro = gsap.timeline();
+    intro.to(imageCard, {
+      rotateX: 0,
+      opacity: 1,
+      scale: 1,
+      filter: 'blur(0px)',
+      duration: 1.3,
+      ease: 'back.out(1.3)',
+    });
+
+    const float = gsap.to(imageCard, {
+      y: -6,
+      duration: 2.5,
+      repeat: -1,
+      yoyo: true,
+      ease: 'sine.inOut',
+      delay: 1.3,
+    });
+
+    const handleMouseEnter = () => {
+      gsap.to(imageCard, {
+        scale: 1.06,
+        rotateY: 8,
+        rotateX: 3,
+        duration: 0.5,
+        ease: 'power2.out',
+      });
+    };
+
+    const handleMouseLeave = () => {
+      gsap.to(imageCard, {
+        scale: 1,
+        rotateY: 0,
+        rotateX: 0,
+        duration: 0.6,
+        ease: 'elastic.out(1, 0.3)',
+      });
+    };
+
+    imageCard.addEventListener('mouseenter', handleMouseEnter);
+    imageCard.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      intro.kill();
+      float.kill();
+      gsap.killTweensOf(imageCard);
+      imageCard.removeEventListener('mouseenter', handleMouseEnter);
+      imageCard.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, []);
 
   useEffect(() => {
     const chars = [];
@@ -288,13 +353,18 @@ const About = () => {
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-20 items-start md:items-center">
           {/* Image Section */}
           <div className="w-full lg:w-auto lg:shrink-0 md:flex md:justify-center">
-            <ScrollReveal className="w-full md:w-88 h-72 sm:h-82 md:h-108 rounded-3xl overflow-hidden bg-[#1e1e2e]">
-              <img
-                src={AboutData.image}
-                alt="Profile"
-                className="w-full h-full object-cover object-top"
-              />
-            </ScrollReveal>
+            <div
+              ref={aboutImageCardRef}
+              className="w-full md:w-88 h-72 sm:h-82 md:h-108 rounded-3xl overflow-hidden bg-[#1e1e2e]"
+            >
+              <ScrollReveal className="w-full h-full">
+                <img
+                  src={AboutData.image}
+                  alt="Profile"
+                  className="w-full h-full object-cover object-top"
+                />
+              </ScrollReveal>
+            </div>
           </div>
 
 
@@ -327,7 +397,7 @@ const About = () => {
 
                 <div className="bg-white rounded-2xl p-6 flex flex-col justify-between h-52 w-full">
                   <div className="text-right">
-                    <h3 className="text-xl font-medium text-gray-800 leading-tight">Success project <br /> completed</h3>
+                    <h3 className="text-xl font-medium text-gray-800 leading-tight">Projects delivered<br />with purpose</h3>
                   </div>
                   <p className="text-gray-500 text-sm max-w-50">
                     {AboutData.stats.note}
@@ -347,7 +417,7 @@ const About = () => {
 
                 <div className=" cards bg-white rounded-2xl p-6 flex flex-col justify-between h-52 w-full">
                   <div className="text-right">
-                    <h3 className="text-xl font-medium text-gray-800 leading-tight">Customer <br /> satisfaction rate</h3>
+                    <h3 className="text-xl font-medium text-gray-800 leading-tight">Partnership <br /> satisfaction</h3>
                   </div>
 
                   <div className="hidden md:flex items-center mt-auto overflow-hidden relative">

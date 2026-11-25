@@ -85,7 +85,7 @@ const FAQ = () => {
                                 <div className="mt-2">
                                     <Link to="/contact">
                                         <ArrowBtn
-                                            label="Contact Us"
+                                            label="Talk to Our Team"
                                             btnBg="bg-gray-50"
                                             padding='px-4 py-4'
                                             iconBg="bg-primary"

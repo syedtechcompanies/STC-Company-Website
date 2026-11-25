@@ -13,18 +13,18 @@ export const HeroData = {
 
 // ABOUT SECTION
 export const AboutData = {
-    heading: "Results for every project",
-    highlight: "with a focus on design and functionality",
+    heading: "Purpose behind every project",
+    highlight: "precision in every experience",
     description: {
-        strong: "No fluff, just results.",
-        span1: "Thoughtful design and",
-        span2: "tools that make your work easier. We focus on smart",
-        span3: "design and useful features, project after project.",
+        strong: "Strategy first.",
+        span1: "Every build begins with",
+        span2: "a clear understanding of people, goals, and workflows.",
+        span3: "The result is practical technology shaped for lasting progress.",
     },
 
     stats: {
         projectsCompleted: "50+",
-        note: "We’ve delivered projects that help companies generate real results.",
+        note: "Every engagement is measured by the value it creates for the client.",
     },
     clientsMarquee: ["client1.png", "client2.png", "client3.png"],
     image: 'https://res.cloudinary.com/dzo12ba3f/image/upload/v1778054308/ssi-frontend-media/file_l3rctm.jpg',
@@ -32,10 +32,10 @@ export const AboutData = {
 
 // PROJECTS SECTION
 export const ProjectsData = {
-    topHead: 'Used Technologies',
-    heading: "Our works across industries",
+    topHead: 'Built with the right technology',
+    heading: "Selected work, real-world impact",
     description:
-        "Check out our awesome projects that are sure to grab attention.",
+        "Explore digital products created around distinct goals and everyday challenges.",
     items: [
         {
             ItemNo: 1,
@@ -70,7 +70,7 @@ export const ProjectsData = {
 
 // SERVICES SECTION
 export const ServicesData = {
-    Title: "See our all services",
+    Title: "Explore our capabilities",
 
     ServicesList: [
         {
@@ -120,8 +120,8 @@ export const ServicesData = {
 
 // TEAM SECTION
 export const TeamData = {
-    heading: "Meet the experts",
-    subtitle: "behind gence",
+    heading: "The people behind the progress",
+    subtitle: "Strategy, craft, and engineering working as one",
     Members: [
         {
             id: 1,
@@ -227,8 +227,8 @@ export const PricingData = {
 
 // TESTIMONIALS SECTION
 export const successStoryData = {
-    heading: "What Our Clients Say",
-    description: "We build thoughtful digital products that help businesses move forward.",
+    heading: "Voices from our partnerships",
+    description: "Useful solutions begin with honest collaboration and shared ambition.",
     image: "https://res.cloudinary.com/dzblxtvh9/image/upload/v1776410358/image-1_ziuspi.webp",
     list: [
         {
@@ -252,8 +252,8 @@ export const successStoryData = {
 
 // FAQ SECTION
 export const FAQData = {
-    heading: "Frequently Asked Questions",
-    subtitle: "Learn how Syed Tec Company helps businesses plan, build, and improve digital products.",
+    heading: "Questions, answered clearly",
+    subtitle: "A practical overview of how Syed Tec Company turns ideas into dependable digital products.",
     items: [
         {
             id: 1,
@@ -305,9 +305,9 @@ export const FAQData = {
 
 // CTA SECTION
 export const CTAData = {
-    heading: "Let’s Build something meaningful",
+    heading: "Create what comes next",
     description:
-        "Explore our work and see how we can help bring your next digital project to life.",
+        "Bring us a challenge, an ambition, or an early idea. We will help shape it into a focused digital solution.",
     button: {
         label: "Contact Us Now",
         link: "/contact",

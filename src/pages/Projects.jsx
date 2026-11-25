@@ -199,7 +199,7 @@ function Projects() {
           {/* HEADER */}
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <ArrowBtn
-              label="Our Work"
+              label="Work & Outcomes"
               iconBg="bg-black"
               iconColor="text-white"
               textColor="text-black"
@@ -213,7 +213,7 @@ function Projects() {
           {/* Heading */}
           <div className="mt-6 mb-12">
             <div className="w-full text-center lg:text-left">
-              <SecHeading title="Our Projects." subtitle="Built With Purpose." />
+              <SecHeading title="Digital work." subtitle="Designed with intent." />
 
               <p className="mt-3 text-xs font-bold tracking-[0.18em] text-text-muted uppercase">
                 {projectCountLabel(loading ? null : projects.length)}

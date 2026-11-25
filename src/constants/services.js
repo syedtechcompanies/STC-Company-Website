@@ -14,42 +14,42 @@ export const ssiservices = [
         id: 1,
         icon: WebIcon,
         title: "Web Development",
-        desc: "Blazing-fast, scalable web apps with React, Next.js, and Node.js.",
+        desc: "Fast, scalable web platforms engineered for real workflows and future growth.",
         tags: ["React", "Next.js", "Node.js"]
     },
     {
         id: 2,
         icon: MobileIcon,
-        title: "Mobile App Dev",
-        desc: "Cross-platform mobile experiences with Flutter and React Native.",
+        title: "Mobile Applications",
+        desc: "Intuitive cross-platform apps that keep users connected wherever they work.",
         tags: ["Flutter", "React Native"]
     },
     {
         id: 3,
         icon: DesignIcon,
         title: "UI/UX Design",
-        desc: "Human-centered design systems in Figma and Adobe XD.",
+        desc: "Research-led interfaces that make complex actions feel clear and natural.",
         tags: ["Figma", "Adobe XD"]
     },
     {
         id: 4,
         icon: AIIcon,
         title: "AI & ML Solutions",
-        desc: "Intelligent automation and predictive analytics solutions.",
+        desc: "Practical AI systems that automate repetitive work and reveal better decisions.",
         tags: ["Python", "TensorFlow", "OpenAI"]
     },
     {
         id: 5,
         icon: CloudIcon,
         title: "Cloud & DevOps",
-        desc: "CI/CD pipelines, Kubernetes deployments, and scalable cloud infrastructure.",
+        desc: "Reliable delivery pipelines and cloud foundations prepared for changing demand.",
         tags: ["AWS", "Docker", "K8s"]
     },
     {
         id: 6,
         icon: SecurityIcon,
         title: "Cybersecurity",
-        desc: "Penetration testing and security hardening for digital assets.",
+        desc: "Security testing and focused hardening that protect products and sensitive data.",
         tags: ["VAPT", "SOC", "Zero Trust"]
     }
 ];
