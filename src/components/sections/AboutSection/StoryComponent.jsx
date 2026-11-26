@@ -63,19 +63,19 @@ const StoryComponent = () => {
                     <img
                         src="https://res.cloudinary.com/dzo12ba3f/image/upload/v1778054586/file_qd9o9h.webp"
                         alt="story-1"
-                        className="w-1/3 h-52 sm:h-72 md:h-96 lg:h-[32rem] object-cover rounded-xl sm:rounded-2xl transition-transform duration-500 ease-out hover:scale-[1.03]"
+                        className="w-1/3 h-40 sm:h-72 md:h-96 lg:h-[32rem] object-cover rounded-xl sm:rounded-2xl transition-transform duration-500 ease-out hover:scale-[1.03]"
                         loading="lazy"
                     />
                     <img
                         src="https://res.cloudinary.com/dzo12ba3f/image/upload/v1778054583/file_dopmcv.webp"
                         alt="story-2"
-                        className="w-1/3 h-52 sm:h-72 md:h-96 lg:h-[32rem] object-cover rounded-xl sm:rounded-2xl transition-transform duration-500 ease-out hover:scale-[1.03]"
+                        className="w-1/3 h-40 sm:h-72 md:h-96 lg:h-[32rem] object-cover rounded-xl sm:rounded-2xl transition-transform duration-500 ease-out hover:scale-[1.03]"
                         loading="lazy"
                     />
                     <img
                         src="https://res.cloudinary.com/dzo12ba3f/image/upload/v1778054582/file_o4rme5.webp"
                         alt="story-3"
-                        className="w-1/3 h-52 sm:h-72 md:h-96 lg:h-[32rem] object-cover rounded-xl sm:rounded-2xl transition-transform duration-500 ease-out hover:scale-[1.03]"
+                        className="w-1/3 h-40 sm:h-72 md:h-96 lg:h-[32rem] object-cover rounded-xl sm:rounded-2xl transition-transform duration-500 ease-out hover:scale-[1.03]"
                         loading="lazy"
                     />
                 </div>

@@ -2,7 +2,6 @@ import React from 'react'
 import Navbar2 from './Navbar2'
 import Footer from './Footer'
 import { Outlet } from 'react-router-dom'
-import ChatWidget from '../ChatWidget'  // 👈 path apne folder structure ke hisaab se adjust karo
 
 const layout = () => {
     return (
@@ -19,7 +18,6 @@ const layout = () => {
                 <Footer />
             </footer>
 
-            <ChatWidget />   {/* 👈 ye add kiya — har page pe fixed rahega */}
         </>
     )
 }

@@ -430,6 +430,7 @@ const HeroSection = () => {
                 lg:px-6
                 py-8
                 sm:py-10
+                lg:-mt-[9.25rem]
                 transition-all
                 duration-700
                 "
@@ -485,58 +486,12 @@ const HeroSection = () => {
                         lg:px-10
                         py-8
                         sm:py-10
+                        lg:translate-y-6
                         flex
                         flex-col
                         items-center
                         "
           >
-            {/* Badge */}
-            <div
-              className="
-                            inline-flex
-                            items-center
-                            gap-2
-                            mb-6
-                            px-4
-                            py-1.5
-                            rounded-full
-                            text-indigo-600
-                            text-[0.68rem]
-                            font-bold
-                            tracking-[0.18em]
-                            uppercase
-                            border
-                            border-indigo-200/50
-                            bg-white/60
-                            backdrop-blur-md
-                            "
-            >
-              <span className="relative inline-block w-2 h-2">
-                <span
-                  className="
-                                    absolute
-                                    inset-0
-                                    rounded-full
-                                    bg-indigo-500
-                                    opacity-40
-                                    "
-                  style={{
-                    animation: "pingAnim 1.5s ease-in-out infinite",
-                  }}
-                />
-
-                <span
-                  className="
-                                    absolute
-                                    inset-0
-                                    rounded-full
-                                    bg-indigo-500
-                                    "
-                />
-              </span>
-              Purpose-built digital solutions
-            </div>
-
             {/* Heading */}
             <h1
               className="

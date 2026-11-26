@@ -81,26 +81,26 @@ const ServiceRow = ({
             <div
                 className="overflow-hidden transition-all duration-[400ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
                 style={{
-                    maxHeight: isExpanded ? "180px" : "0px",
+                    maxHeight: isExpanded ? "320px" : "0px",
                     opacity: isExpanded ? 1 : 0,
                 }}
             >
                 <div
-                    className="pt-3 pb-2 flex items-center justify-center gap-4 md:flex-row lg:items-center"
+                    className="flex flex-col items-center justify-center gap-4 px-3 pt-3 pb-2 sm:flex-row sm:px-0"
                 >
 
                     {/* IMAGE */}
-                    <div className="w-55 h-27.5 rounded-xl overflow-hidden">
+                    <div className="h-27.5 w-full max-w-55 rounded-xl overflow-hidden">
                         <img
                             src={service.image}
                             alt={service.title}
-                            className="w-full object-cover"
+                            className="w-full h-full object-cover"
                             loading="lazy"
                         />
                     </div>
 
                     {/* TAGS */}
-                    <div className="flex flex-col gap-4">
+                    <div className="flex w-full flex-col items-center gap-3 sm:items-start">
 
                         <p className="text-xl font-thin uppercase tracking-widest text-text-dark">
                             Categories

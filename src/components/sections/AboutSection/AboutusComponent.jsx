@@ -31,12 +31,12 @@ const AboutusComponent = () => {
         <div className="w-full bg-white px-2 mt-18">
             <div className="mx-auto">
                 {/* Header */}
-                <div ref={headerRef} className="flex flex-col lg:flex-row items-center justify-between gap-4 md:gap-6 lg:gap-20">
+                <div ref={headerRef} className="flex flex-col items-center gap-4 md:gap-6 lg:items-start lg:gap-2">
                     <h1 className="text-5xl sm:text-6xl lg:text-[80px] font-bold text-black text-center lg:text-left">
                         Who we are
                     </h1>
 
-                    <p className="text-md sm:text-lg text-gray-500 text-center lg:text-right max-w-xl">
+                    <p className="text-md sm:text-lg text-gray-500 text-center lg:text-left max-w-xl">
                         We combine practical engineering with thoughtful design.
                         <br />
                         design and useful features, project after project.
