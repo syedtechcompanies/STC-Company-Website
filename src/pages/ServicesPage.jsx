@@ -5,16 +5,18 @@ import useInView from "../hooks/useInView.js";
 import { getServicesPageHeader } from "../constants/servicesPageData.js";
 import { ArrowBtn } from "../components/UI/ArrowBtn.jsx";
 import { useState, useEffect } from "react";
-import { demoServices } from "../constants/demoData.js";
+import { demoServiceDetails, demoServices } from "../constants/demoData.js";
 import SEO from "../services/SEO";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // SubServiceRow Component
 // ─────────────────────────────────────────────────────────────────────────────
-const SubServiceRow = ({ item, serviceId }) => (
+const SubServiceRow = ({ item, serviceId, onActivate }) => (
   <Link
-    to={`/services/${item._id}/${serviceId}`}
+    to={`/services/${item.id}/${serviceId}`}
     className="relative overflow-hidden flex items-center justify-between gap-4 border-b border-border-dark py-8 group"
+    onMouseEnter={() => onActivate(item.id)}
+    onFocus={() => onActivate(item.id)}
   >
     <span
       aria-hidden="true"
@@ -42,7 +44,15 @@ const SubServiceRow = ({ item, serviceId }) => (
 // ─────────────────────────────────────────────────────────────────────────────
 const ServiceCategoryBlock = ({ category, index }) => {
   const [ref, isInView] = useInView({ threshold: 0.1 });
+  const [activeSubServiceId, setActiveSubServiceId] = useState(
+    category.subCategories?.[0]?.id
+  );
   const imageRight = index % 2 === 0;
+  const activeSubService = category.subCategories?.find(
+    (sub) => sub.id === activeSubServiceId
+  );
+  const image =
+    demoServiceDetails[activeSubService?.id]?.images?.[0] ?? category.thumbnail;
 
   return (
     <div
@@ -70,6 +80,7 @@ const ServiceCategoryBlock = ({ category, index }) => {
                 serviceId={category._id}
                 key={sub.id}
                 item={{ ...sub, number: String(i + 1).padStart(2, "0") }}
+                onActivate={setActiveSubServiceId}
               />
             ))}
           </div>
@@ -83,8 +94,8 @@ const ServiceCategoryBlock = ({ category, index }) => {
           style={{ minHeight: "240px" }}
         >
           <img
-            src={category.thumbnail}
-            alt={category.title}
+            src={image}
+            alt={activeSubService?.title ?? category.title}
             className="w-full h-full object-cover"
             loading="lazy"
           />

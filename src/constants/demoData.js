@@ -36,7 +36,10 @@ export const demoServiceDetails = {
       { title: "Modern Technology", caption: "Built with maintainable components and current development practices." },
     ],
     whyTake: "A custom web application helps automate work, improve customer experience, and scale with your organization.",
-    images: ["https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1400"],
+    images: [
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1400&auto=format&fit=crop&q=85",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1400&auto=format&fit=crop&q=85",
+    ],
   },
   "ui-ux": {
     id: "ui-ux",
@@ -49,7 +52,10 @@ export const demoServiceDetails = {
       { title: "Prototype Ready", caption: "Clickable flows make ideas easy to validate before development." },
     ],
     whyTake: "Good UI/UX improves usability, trust, and conversion across every digital product.",
-    images: ["https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1400"],
+    images: [
+      "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1400&auto=format&fit=crop&q=85",
+      "https://images.unsplash.com/photo-1559028006-448665bd7c7f?w=1400&auto=format&fit=crop&q=85",
+    ],
   },
   "business-sites": {
     id: "business-sites",
@@ -62,7 +68,10 @@ export const demoServiceDetails = {
       { title: "Clear Calls to Action", caption: "Help visitors find information and contact your team." },
     ],
     whyTake: "A professional website gives customers a reliable way to discover your business and understand what you offer.",
-    images: ["https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1400"],
+    images: [
+      "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1400&auto=format&fit=crop&q=85",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1400&auto=format&fit=crop&q=85",
+    ],
   },
   ecommerce: {
     id: "ecommerce",
@@ -75,7 +84,10 @@ export const demoServiceDetails = {
       { title: "Product Management", caption: "Organized product details, categories, and inventory workflows." },
     ],
     whyTake: "An effective online store helps businesses reach more customers and manage orders with less friction.",
-    images: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1400"],
+    images: [
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1400&auto=format&fit=crop&q=85",
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1400&auto=format&fit=crop&q=85",
+    ],
   },
   "brand-identity": {
     id: "brand-identity",
@@ -88,7 +100,10 @@ export const demoServiceDetails = {
       { title: "Practical Guidelines", caption: "Reusable direction that supports future marketing and product work." },
     ],
     whyTake: "A thoughtful brand identity helps your business communicate with clarity and build recognition over time.",
-    images: ["https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=1400"],
+    images: [
+      "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=1400&auto=format&fit=crop&q=85",
+      "https://images.unsplash.com/photo-1634942536790-2536e140de4c?w=1400&auto=format&fit=crop&q=85",
+    ],
   },
   graphics: {
     id: "graphics",
@@ -101,6 +116,9 @@ export const demoServiceDetails = {
       { title: "Platform-Ready", caption: "Assets are prepared for the channels where your audience sees them." },
     ],
     whyTake: "Clear, consistent visuals make your brand easier to recognize and your message easier to understand.",
-    images: ["https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1400"],
+    images: [
+      "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1400&auto=format&fit=crop&q=85",
+      "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=1400&auto=format&fit=crop&q=85",
+    ],
   },
 };

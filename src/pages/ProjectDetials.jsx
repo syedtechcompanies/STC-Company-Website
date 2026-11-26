@@ -167,9 +167,9 @@ export default function ProjectDetails() {
               href={project.href}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 mt-8 sm:mt-10 text-sm font-semibold text-indigo-600 hover:text-indigo-800 active:text-indigo-900 transition-colors group"
+              className="inline-flex items-center gap-2 mt-8 sm:mt-10 rounded-full bg-gray-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-600 focus-visible:ring-offset-2 group"
             >
-              Visit Project
+              Visit Website
               <span className="transition-transform duration-200 group-hover:translate-x-0.5">
                 →
               </span>

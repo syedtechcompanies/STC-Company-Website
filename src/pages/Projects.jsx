@@ -173,16 +173,16 @@ function Projects() {
   return (
     <>
       <SEO
-        title="Projects | Syed Tec Company"
-        description="Explore software, web, mobile, and digital product projects by Syed Tec Company."
-        keywords="Syed Tec Company projects, software portfolio, web development, custom software, mobile apps, digital products"
+        title="Projects | Syed Tech Company"
+        description="Explore software, web, mobile, and digital product projects by Syed Tech Company."
+        keywords="Syed Tech Company projects, software portfolio, web development, custom software, mobile apps, digital products"
         url="https://www.ssibannu.com/projects"
         image="https://www.ssibannu.com/stc-logo.svg"
         imageWidth="1200"
         imageHeight="630"
-        siteName="Syed Tec Company"
+        siteName="Syed Tech Company"
         locale="en_US"
-        author="Syed Tec Company"
+        author="Syed Tech Company"
         city="Bannu"
         region="PK-KP"
         twitterCard="summary_large_image"

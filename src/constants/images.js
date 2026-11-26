@@ -26,6 +26,7 @@ export const edcImage3 = ""
 
 
 export const hostalThumbnail = "https://res.cloudinary.com/dzo12ba3f/image/upload/v1777440436/thumbnail4_wsghq3.jpg"
+export const hostelManagementThumbnail = "/images/Projects/hostel-management-dashboard.png"
 
 
 
@@ -87,3 +88,9 @@ export const graphicDesignThumbnail = "https://res.cloudinary.com/dzo12ba3f/imag
 export const videoEditingThumbnail = "https://res.cloudinary.com/dzo12ba3f/image/upload/v1777523843/WhatsApp_Image_2026-04-30_at_9_compressed_3_snmj9f.webp"
 export const msOfficeThumbnail = "https://res.cloudinary.com/dzo12ba3f/image/upload/v1777525137/WhatsApp_Image_2026-04-30_at_9_compressed_2_x3pk8h.webp"
 export const citThumbnail = "https://res.cloudinary.com/dzo12ba3f/image/upload/v1777525336/WhatsApp_Image_2026-04-30_at_10_compressed_guow3t.webp"
+
+
+
+
+
+export const nextSkillThumbnail = "/images/Projects/nextskill-career-learning.png"

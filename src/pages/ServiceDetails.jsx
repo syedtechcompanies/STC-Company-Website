@@ -236,11 +236,12 @@ const RichImage = ({ src }) => {
             transition: "opacity 0.7s ease, transform 0.7s cubic-bezier(0.22,1,0.36,1)",
           }}
           className="rounded-xl overflow-hidden w-full border border-border-dark"
+          style={{ height: "clamp(320px, 56vw, 660px)" }}
         >
           <img
             src={src}
             alt="Service detail"
-            className="w-full h-auto object-cover"
+            className="w-full h-full object-cover"
             loading="lazy"
           />
         </div>
@@ -342,7 +343,10 @@ const ServiceDetails = () => {
   };
 
   // RichImage expects: src
-  const richImageSrc = service.images.find(Boolean) ?? parentCategory.thumbnail;
+  const richImageSrc =
+    service.images.find((src, index) => index > 0 && Boolean(src)) ??
+    service.images.find(Boolean) ??
+    parentCategory.thumbnail;
 
   // WhySection expects: content{ whyHeading, whyParagraph1, whyParagraph2, whyParagraph3 }
   // whyTake is one paragraph — we split it into sentences for the 3 slots
