@@ -167,18 +167,21 @@ const Footer = () => (
             <Link
               to="/"
               aria-label="Syed Tec Company home"
-              className="block w-[200px] sm:w-[230px]"
+              className="inline-flex items-center gap-3"
             >
               <img
-                src="/assets/stc.png"
+                src="/assets/stclogo-transparent.png"
                 alt="Syed Tec Company"
-                className="h-auto w-full object-contain"
+                className="h-16 w-16 shrink-0 object-contain sm:h-20 sm:w-20"
               />
+              <span className="text-3xl font-bold tracking-wide text-white sm:text-4xl">
+                STC
+              </span>
             </Link>
 
-            {FooterLists?.tagline && (
+            {FooterLists.brand?.description && (
               <p className="mt-5 max-w-xs text-sm leading-relaxed text-text-muted">
-                {FooterLists.tagline}
+                {FooterLists.brand.description}
               </p>
             )}
 

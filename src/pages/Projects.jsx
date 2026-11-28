@@ -35,7 +35,7 @@ const ProjectCard = forwardRef(function ProjectCard(
   const [hoverImgFailed, setHoverImgFailed] = useState(false);
 
   const photo = getImageUrl(project.thumbnail ?? project.thumbnailImage);
-  const hoverPhoto = getImageUrl(project.screenshots);
+  const hoverPhoto = getImageUrl(project.screenshots) || photo;
 
   // Whole card navigates to the project detail page at /projects/<id>.
   // The external link icon is independent — if the project has its own

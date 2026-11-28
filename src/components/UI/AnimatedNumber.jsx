@@ -1,14 +1,10 @@
-
-
-
-
-
 import { useEffect, useRef, useCallback } from 'react';
 
 const AnimatedNumber = ({ number, steps = 45, stepMs = 35 }) => {
   const containerRef = useRef(null);
   const currentRef = useRef(0);
   const timerRef = useRef(null);
+  const settleTimerRef = useRef(null);
   const hasAnimated = useRef(false);
   const isAnimating = useRef(false);
 
@@ -34,23 +30,13 @@ const AnimatedNumber = ({ number, steps = 45, stepMs = 35 }) => {
     `position:absolute;left:0;top:0;width:100%;
      text-align:center;line-height:1.2em;`;
 
-  // Pure CSS transition instead of GSAP
-const animateSpan = (span, fromY, toY, onDone) => {
-  // Set the transition properties
-  span.style.transition = `transform 0.7s cubic-bezier(0.4,0,0.2,1), opacity 0.7s cubic-bezier(0.4,0,0.2,1)`;
-  
-  // Force reflow
-  span.getBoundingClientRect();
-
-  // 1. Move to the target Y position
-  span.style.transform = `translateY(${toY})`;
-
-  // 2. Logic: If it's moving TO the center (0%), it should be visible (1)
-  //    If it's moving AWAY from the center, it should fade out (0)
-  span.style.opacity = toY === '0%' ? '1' : '0';
-
-  span.addEventListener('transitionend', onDone, { once: true });
-};
+  const animateSpan = (span, fromY, toY, onDone) => {
+    span.style.transition = `transform 0.7s cubic-bezier(0.4,0,0.2,1), opacity 0.7s cubic-bezier(0.4,0,0.2,1)`;
+    span.getBoundingClientRect();
+    span.style.transform = `translateY(${toY})`;
+    span.style.opacity = toY === '0%' ? '1' : '0';
+    span.addEventListener('transitionend', onDone, { once: true });
+  };
 
   const buildInitial = useCallback((numStr) => {
     const el = containerRef.current;
@@ -99,7 +85,6 @@ const animateSpan = (span, fromY, toY, onDone) => {
       const enterY = fromTop ? '-110%' : '110%';
       const exitY = fromTop ? '110%' : '-110%';
 
-      // Incoming span
       const incoming = document.createElement('span');
       incoming.textContent = pTo[i];
       incoming.style.cssText = spanStyle();
@@ -107,10 +92,7 @@ const animateSpan = (span, fromY, toY, onDone) => {
       incoming.style.opacity = '1';
       col.appendChild(incoming);
 
-      // Animate outgoing out
       animateSpan(outgoing, '0%', exitY, () => outgoing.remove());
-
-      // Animate incoming in
       animateSpan(incoming, enterY, '0%', () => {});
     });
   }, [getCharWidth, buildInitial]);
@@ -119,6 +101,7 @@ const animateSpan = (span, fromY, toY, onDone) => {
     if (isAnimating.current) return;
     isAnimating.current = true;
     if (timerRef.current) clearInterval(timerRef.current);
+    if (settleTimerRef.current) clearTimeout(settleTimerRef.current);
 
     const from = currentRef.current;
     const target = number;
@@ -140,14 +123,21 @@ const animateSpan = (span, fromY, toY, onDone) => {
         if (last !== target) animateDigits(last, target);
         currentRef.current = target;
         isAnimating.current = false;
+        settleTimerRef.current = setTimeout(() => {
+          buildInitial(String(target));
+          settleTimerRef.current = null;
+        }, 750);
       }
     }, stepMs);
-  }, [number, steps, stepMs, animateDigits]);
+  }, [number, steps, stepMs, animateDigits, buildInitial]);
 
   useEffect(() => {
     buildInitial('0');
     currentRef.current = 0;
-    return () => { if (timerRef.current) clearInterval(timerRef.current); };
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+      if (settleTimerRef.current) clearTimeout(settleTimerRef.current);
+    };
   }, [buildInitial]);
 
   useEffect(() => {

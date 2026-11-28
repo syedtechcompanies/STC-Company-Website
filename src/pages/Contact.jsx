@@ -208,9 +208,9 @@ const ContactPage = () => {
                 </script>
             </SEO>
 
-            <section className="bg-bg-section px-5 pb-16 pt-28 sm:px-8 md:pt-32 lg:px-10 lg:pb-24">
+            <section className="px-5 pb-16 pt-28 sm:px-8 md:pt-32 lg:px-10 lg:pb-24">
                 <div className="mx-auto w-full max-w-330">
-                    <header className="mb-10 max-w-4xl md:mb-14">
+                    <header className="mb-10 max-w-4xl md:mb-14 ">
                         <div>
                             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-text-label">
                                 Contact Syed Tech Company

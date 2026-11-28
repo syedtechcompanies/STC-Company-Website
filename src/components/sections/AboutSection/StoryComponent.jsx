@@ -11,10 +11,8 @@ const StoryComponent = () => {
         <div className="w-full bg-white pt-20">
 
             <div className="mx-auto px-3">
-                <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-16">
-
-                    {/* Left Section */}
-                    <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
+                <div className="flex flex-col">
+                    <div className="w-full flex flex-col items-center lg:items-start">
 
                         {/* Section Button */}
                         <div className="mb-3 sm:mb-4 md:mb-6">
@@ -38,11 +36,7 @@ const StoryComponent = () => {
                             experiences built to endure
                         </h2>
 
-                    </div>
-
-                    {/* Right Section - Text Content */}
-                    <div className="w-full lg:w-1/2">
-                        <div className="flex flex-col gap-5 sm:gap-5 gap-y-5">
+                        <div className="mt-6 w-full max-w-4xl flex flex-col gap-5">
 
                             <p className="sm:text-base md:text-lg text-gray-500 text-[16px] leading-relaxed tracking-tighter">
                                 Syed Tech Company was founded to help organizations solve real problems through thoughtful technology. We bring together software development, product design, and practical business insight to create useful digital experiences.

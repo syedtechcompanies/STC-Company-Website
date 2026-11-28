@@ -56,28 +56,24 @@ const AboutusComponent = () => {
                 {/* Stats */}
                 <div ref={statsRef} className="mt-8 md:mt-10 lg:mt-16">
                     <div className="border border-[#D1D1D1] rounded-2xl bg-white overflow-hidden">
-                        <div className="flex flex-col sm:flex-row">
+                        <div className="flex flex-row">
                             {stats.map((item, index) => (
-                                <div key={index} className="flex-1 flex flex-col items-center justify-center text-center px-4 py-6 md:py-8 relative">
+                                <div key={index} className="min-w-0 flex-1 flex flex-col items-center justify-center text-center px-2 py-5 sm:px-3 md:py-8 relative">
 
                                     {index !== 0 && (
-                                        <div className="hidden sm:block absolute left-0 top-1/2 -translate-y-1/2 w-px h-16 md:h-20 bg-[#E5E5E5]" />
+                                        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-px h-12 md:h-20 bg-[#E5E5E5]" />
                                     )}
 
-                                    {index !== 0 && (
-                                        <div className="block sm:hidden absolute top-0 left-4 right-4 h-px bg-[#E5E5E5]" />
-                                    )}
-
-                                    <h2 className="text-4xl sm:text-5xl lg:text-[64px] font-medium text-[#1a1a1a] flex items-center">
+                                    <h2 className="whitespace-nowrap text-2xl sm:text-3xl md:text-5xl lg:text-[64px] font-medium text-[#1a1a1a] flex items-center">
                                         <AnimatedNumber number={parseInt(item.value)} />
                                         %
                                     </h2>
 
-                                    <p className="text-gray-500 text-xs sm:text-sm mt-2">
+                                    <p className="mt-2 text-[10px] leading-tight text-gray-500 sm:text-xs md:text-sm">
                                         {item.label}
                                     </p>
 
-                                    <p className="text-black font-medium text-sm sm:text-base mt-1">
+                                    <p className="mt-1 text-xs font-medium text-black sm:text-sm md:text-base">
                                         {item.name}
                                     </p>
                                 </div>

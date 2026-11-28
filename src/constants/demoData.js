@@ -4,12 +4,12 @@ export { TeamData } from "./HomeData.js";
 export const demoServices = [
   {
     _id: "web-development",
-    title: "Web Development",
+    title: "Development Work",
     thumbnail: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200",
     subCategories: [
-      { id: "web-apps", title: "Custom Web Applications", number: "01" },
-      { id: "business-sites", title: "Business Websites", number: "02" },
-      { id: "ecommerce", title: "E-commerce Solutions", number: "03" },
+      { id: "website-development", title: "Website Development", number: "01" },
+      { id: "desktop-development", title: "Desktop Development", number: "02" },
+      { id: "android-development", title: "Android Development", number: "03" },
     ],
   },
   {
@@ -87,6 +87,54 @@ export const demoServiceDetails = {
     images: [
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1400&auto=format&fit=crop&q=85",
       "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1400&auto=format&fit=crop&q=85",
+    ],
+  },
+  "website-development": {
+    id: "website-development",
+    title: "Website Development",
+    subtitle: "Responsive, reliable websites tailored to your business.",
+    about: "We build websites that present your business clearly and help customers find the information and services they need.",
+    description: "From company websites to landing pages, we focus on responsive layouts, accessible content, and dependable performance.",
+    benefits: [
+      { title: "Responsive Design", caption: "Works smoothly across mobile, tablet, and desktop devices." },
+      { title: "Built for Your Goals", caption: "Pages and features are planned around your business and customers." },
+    ],
+    whyTake: "A well-built website helps people discover your business, understand your offer, and get in touch.",
+    images: [
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1400&auto=format&fit=crop&q=85",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1400&auto=format&fit=crop&q=85",
+    ],
+  },
+  "desktop-development": {
+    id: "desktop-development",
+    title: "Desktop Development",
+    subtitle: "Desktop software designed around your workflows.",
+    about: "We develop desktop applications that help teams manage their everyday work with focused, easy-to-use software.",
+    description: "From internal tools to specialized business applications, we build practical desktop experiences for your requirements.",
+    benefits: [
+      { title: "Purpose-Built Tools", caption: "Features and workflows are tailored to your team's needs." },
+      { title: "Reliable Performance", caption: "Designed for dependable use across daily operations." },
+    ],
+    whyTake: "Custom desktop software can streamline work and provide tools that fit the way your team operates.",
+    images: [
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1400&auto=format&fit=crop&q=85",
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1400&auto=format&fit=crop&q=85",
+    ],
+  },
+  "android-development": {
+    id: "android-development",
+    title: "Android Development",
+    subtitle: "Useful Android apps for your customers and your team.",
+    about: "We create Android applications that make your services and workflows accessible on mobile devices.",
+    description: "From planning to release, we focus on clear interfaces, useful features, and reliable performance across Android devices.",
+    benefits: [
+      { title: "Mobile-First Experience", caption: "Interfaces designed for everyday use on Android phones and tablets." },
+      { title: "Practical Features", caption: "App functionality is built around your users and business goals." },
+    ],
+    whyTake: "An Android app can make your services easier to access and help your customers stay connected wherever they are.",
+    images: [
+      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9?w=1400&auto=format&fit=crop&q=85",
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1400&auto=format&fit=crop&q=85",
     ],
   },
   "brand-identity": {
